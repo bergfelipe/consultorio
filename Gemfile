@@ -42,6 +42,7 @@ gem 'rubocop-rails', require: false
 gem 'rubycritic', require: false
 gem 'jquery-rails'
 gem 'cocoon'
+gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

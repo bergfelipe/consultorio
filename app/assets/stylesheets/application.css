@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ #rodape{
+    background-color: #5554C9; 
+    width:100%;
+  }
+  html {
+     height: 100%;
+  }
+  
+  body {
+     min-height: 100%;
+     position: relative;
+     
+  }
+  #rodape{
+    position: absolute;
+    bottom: 0;
+  }
