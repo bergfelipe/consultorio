@@ -14,7 +14,12 @@
  *= require_self
  */
  #rodape{
-    background-color: #5554C9; 
+   background: rgba( 255, 255, 255, 0.35 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 13.5px );
+   -webkit-backdrop-filter: blur( 13.5px );
+  
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
     width:100%;
   }
   html {
@@ -24,9 +29,23 @@
   body {
      min-height: 100%;
      position: relative;
-     
+     background-image: url(https://img.freepik.com/fotos-gratis/abstratos-blur-hospitalar-clinica-interior_1203-7890.jpg?w=1380);
+     background-size: cover;
+     background-repeat: no-repeat;
   }
   #rodape{
     position: absolute;
     bottom: 0;
   }
+  .navbar{
+   
+      background: rgba( 255, 255, 255, 0.35 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 13.5px );
+      -webkit-backdrop-filter: blur( 13.5px );
+     
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+  }
+
+  

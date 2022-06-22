@@ -1,9 +1,30 @@
-<p id="notice"><%= notice %></p>
+<h3>Consultas</h3>
+<div class="card">
+  <div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @physician.name %>
-</p>
-
-<%= link_to 'Edit', edit_physician_path(@physician) %> |
-<%= link_to 'Back', physicians_path %>
+<table class="table table-dark table-striped">
+    <thead>
+        
+        <th scope="col">Paciente</th>
+        <th scope="col">Data e hora da Consulta</th>
+        
+    </thead>
+    
+    <% @physician.appointments.each do |appointment| %>
+        <tbody>
+          
+            <td>
+              <%= appointment.patient.name %>
+            </td>
+           
+            <td>
+                 <%= appointment.appointment_date %>
+            </td>
+            
+          
+        </tbody>
+        <% end %>
+        
+</table>
+</div>
+</div>

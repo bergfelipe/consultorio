@@ -1,0 +1,5 @@
+class AddFieldsToAppointments < ActiveRecord::Migration[5.2]
+  def change
+    add_column :appointments, :descricao, :string
+  end
+end

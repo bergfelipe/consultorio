@@ -4,6 +4,7 @@ class PhysiciansController < ApplicationController
   # GET /physicians or /physicians.json
   def index
     @physicians = Physician.all
+    @patients = Physician.all
   end
 
   # GET /physicians/1 or /physicians/1.json
@@ -13,6 +14,8 @@ class PhysiciansController < ApplicationController
   # GET /physicians/new
   def new
     @physician = Physician.new
+    @patients = @physician.patients.build
+    @appointments = @physician.appointments.build
   end
 
   # GET /physicians/1/edit
@@ -65,6 +68,6 @@ class PhysiciansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def physician_params
-      params.require(:physician).permit(:name, :appointments_attributes => [:id, :appointment_date, :physician_id, :patient_id, :_destroy, :patient_attributes => [:id, :name]])
+      params.require(:physician).permit(:name, :tipo, :descricao, :appointments_attributes => [:id, :appointment_date, :physician_id, :patient_id, :_destroy, :patient_attributes => [:id, :name]])
     end
 end

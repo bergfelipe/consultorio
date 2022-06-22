@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <label for="">Nome</label>
     <%= form.text_field :name %>
+    <label for="">Tipo</label>
+    <%= form.text_field :tipo %>
+    <label for="">Descrição</label>
+    <%= form.text_field :descricao %>
     
     <%= link_to_add_association 'add appointment', form, :appointments,
     'data-association-insertion-node' => "#appointments-patient ol",
