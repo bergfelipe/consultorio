@@ -276,7 +276,7 @@ h1 {
   text-align: center;
   background: #242625;
   border-radius: 10px;
-  box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+  
   &__container {
     display: grid;
     width:100%;
@@ -294,8 +294,7 @@ h1 {
     border-radius: 5px;
     padding: 20px;
     cursor: pointer;
-box-shadow:  16px 16px 44px #0a0a0a, 
-             -16px -16px 44px #282a28;
+
     transition: 0.3s all ease-in-out;
     &:hover{
       margin-top:-10px;

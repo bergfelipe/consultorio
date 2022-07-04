@@ -15,8 +15,8 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.physician %></td>
-        <td><%= appointment.patient %></td>
+        <td><%= appointment.physician.name %></td>
+        <td><%= appointment.patient.name %></td>
         <td><%= appointment.appointment_date %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
