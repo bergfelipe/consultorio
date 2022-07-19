@@ -34,7 +34,7 @@
      background-repeat: no-repeat;
   }
   #rodape{
-    position: absolute;
+    position: relative;
     bottom: 0;
   }
   .navbar{
@@ -47,14 +47,7 @@
     
   }
 
-  .card:hover {
-    transform: translateY(-20px);
-    transition: 0.4s ease-out;
-  }
-  
-  .card:hover ~ .card {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-  }
  
+  .row {
+    --bs-gutter-x: none!important;
+  }

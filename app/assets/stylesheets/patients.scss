@@ -1,3 +1,23 @@
 // Place all the styles related to the Patients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+ 
+#aaa{
+    transition: none;
+}  
+
+#aaa:hover{
+    transform: none;
+    transition: none;
+}
