@@ -1,25 +1,27 @@
 <%= link_to 'New Physician', new_physician_path %>
-<div>
-<div class="row row-cols-sm-2 row-cols-md-3 ">
-<% @physicians.each do |physician| %>
-<ul>
-  <li class="booking-card"
-    style="background-image: url(https://img.freepik.com/fotos-gratis/bela-jovem-doutora-olhando-a-camera-no-escritorio_1301-7807.jpg?t=st=1655908257~exp=1655908857~hmac=ced80ca9cb752007fae75f9ad879003ca860cae2e5a0ec762f3ebafa7278b60b&w=740)">
-    <div class="book-container">
-      <div class="content">
-        <%= link_to 'Ver Consultas', physician, class: 'btn btn-primary mt-4' %>
-      </div>
-    </div>
-    <div class="informations-container">
-      <h2 class="title"><%= physician.name %></h2>
-      <p class="sub-title"><%= physician.tipo %></p>      
-        </svg><%= physician.descricao %></p>
-           <div class="more-information">                
-        <p><%= link_to 'Adicionar Consulta', edit_physician_path(physician), class: 'btn btn-outline-success' %> <%= link_to 'Apagar', physician,class: 'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>     
-      </div>
-    </div>
-  </li>
-</ul>
+<div class="row row-cols-md-4 ">
+  <% @physicians.each do |physician| %>
+    <ul>
+      <li class="booking-card"
+          style="background-image: url(https://img.freepik.com/fotos-gratis/bela-jovem-doutora-olhando-a-camera-no-escritorio_1301-7807.jpg?t=st=1655908257~exp=1655908857~hmac=ced80ca9cb752007fae75f9ad879003ca860cae2e5a0ec762f3ebafa7278b60b&w=740)">
+          <div class="book-container">
+            <div class="content">
+              <%= link_to 'Ver Consultas', physician, class: 'btn btn-primary mt-4' %>
+            </div>
+          </div>
+          
+          <div class="informations-container">
+            <h2 class="title"><%= physician.name %></h2>
+            <p class="sub-title"><%= physician.tipo %></p>      
+              </svg><%= physician.descricao %></p>
+                <div class="more-information">                
+              <p><%= link_to 'Adicionar Consulta', edit_physician_path(physician), class: 'btn btn-outline-success' %> <%= link_to 'Apagar', physician,class: 'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>     
+            </div>
+          </div>
+      </li>
+   </ul>
 <%end%>
 </div>
-</div>
+<br>
+
+

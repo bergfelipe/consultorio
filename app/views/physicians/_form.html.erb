@@ -11,19 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <label for="">Nome</label>
-    <%= form.text_field :name %>
-    <label for="">Tipo</label>
-    <%= form.text_field :tipo %>
-    <label for="">Descrição</label>
-    <%= form.text_field :descricao %>
-    
-    <%= link_to_add_association 'add appointment', form, :appointments,
-    'data-association-insertion-node' => "#appointments-patient ol",
+
+  <div class="row"> 
+                 
+    <div class="col-md-2">
+      <div class="fieldlabels">
+        <label>Nome do Médico <abbr title="obrigatório">*</abbr></label>
+     <%= form.text_field :name, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Ex: João Souza Cardoso', required: true %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="fieldlabels">
+        <label>Tipo de Médico <abbr title="obrigatório">*</abbr></label>
+     <%= form.text_field :tipo, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Ex: Dentista', required: true %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="fieldlabels">
+        <label>Tipo de Médico <abbr title="obrigatório">*</abbr></label>
+     <%= form.text_field :descricao, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Função', required: true %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      
+  <%= link_to_add_association 'add appointment',form, :appointments,
+     'data-association-insertion-node' => "#appointments-patient ol",
     'data-association-insertion-method' => "append", :wrap_object => Proc.
-   new {|appointment| appointment.build_patient; appointment } %>
+   new {|appointment| appointment.build_patient; appointment }, class:"btn btn-primary"%>
    
+   </div>
+   <br>
     
  <hr/>
 
@@ -40,3 +60,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>

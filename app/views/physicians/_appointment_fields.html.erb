@@ -1,11 +1,18 @@
-<li class="control-group nested-fields">
-    <div class="controls">
-        <%= f.datetime_field :appointment_date %>
-            <%= f.fields_for :patient do |appointment_patient| %>
-                <label for="exampleInputEmail1" class="form-label">Nome do Paciente</label>
-                <%= appointment_patient.text_field :name %>
-                    <% end %>
-      <%= link_to_remove_association "remove" , f %>
 
-    </div>
-</li>
+<div class="card text-white bg-success mb-3 nested-fields" style="max-width: 35rem;">
+  <div class="card-header">Consulta</div>
+  <div class="card-body">
+    <label>Data da Consulta <abbr title="obrigatório">*</abbr></label>
+    <%= f.datetime_field :appointment_date, class: 'form-control', required: true %>
+    <%= f.fields_for :patient do |appointment_patient| %>
+    <label>Nome do Paciente <abbr title="obrigatório">*</abbr></label>
+    <%= appointment_patient.text_field :name, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Ex: João Souza Cardoso', required: true %>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <%end%>
+    
+      <%= link_to_remove_association "remove" , f, class:"btn btn-danger" %>
+    
+  </div>
+</div>
+
+

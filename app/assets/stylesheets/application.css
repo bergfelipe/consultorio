@@ -29,12 +29,12 @@
   body {
      min-height: 100%;
      position: relative;
-     background-image: url(https://img.freepik.com/fotos-gratis/abstratos-blur-hospitalar-clinica-interior_1203-7890.jpg?w=1380);
+    
      background-size: cover;
      background-repeat: no-repeat;
   }
   #rodape{
-    position: relative;
+    position: absolute;
     bottom: 0;
   }
   .navbar{
@@ -48,6 +48,4 @@
   }
 
  
-  .row {
-    --bs-gutter-x: none!important;
-  }
+ 
