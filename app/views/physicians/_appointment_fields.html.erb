@@ -1,5 +1,5 @@
 
-<div class="card text-white bg-success mb-3 nested-fields" style="max-width: 35rem;">
+<div class="card text-white bg-success mb-3 nested-fields" style="max-width: 45rem;">
   <div class="card-header">Consulta</div>
   <div class="card-body">
     <label>Data da Consulta <abbr title="obrigatório">*</abbr></label>
@@ -7,6 +7,8 @@
     <%= f.fields_for :patient do |appointment_patient| %>
     <label>Nome do Paciente <abbr title="obrigatório">*</abbr></label>
     <%= appointment_patient.text_field :name, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Ex: João Souza Cardoso', required: true %>
+    <label>Descrição do Paciente <abbr title="obrigatório">*</abbr></label>
+    <%= appointment_patient.text_field :descricao_paciente, autocomplete: "nope" ,class: 'form-control' , placeholder: 'Ex: João Souza Cardoso', required: true %>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <%end%>
     

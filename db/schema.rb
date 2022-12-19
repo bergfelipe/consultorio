@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_06_21_120129) do
 
   create_table "patients", force: :cascade do |t|
     t.string "name"
+    t.string "descricao_paciente"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
