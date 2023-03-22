@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :physicians
 
   get "Pacientes", to: 'patients#index'
-  get "Home", to: 'physicians#index'
+  get "Medicos", to: 'physicians#index'
+  get "Consultas", to: 'appointments#index'
+  get "Home", to: 'home#index'
   
 
   root to:'physicians#index'
