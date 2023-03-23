@@ -1,7 +1,14 @@
-
+<body style="background-color: #A5DAE0;">
 <%= link_to 'New Appointment', new_appointment_path %>
 
 
+    <div class="row">
+      <div class="col-xs-6">
+        <h3 class="panel-title text-center">Consultas</h3>
+      </div>
+    </div>
+    <hr style="background-color: black
+    ;">
 
 <% @appointments.each do |appointment| %>
 
@@ -9,7 +16,7 @@
 
 <div class="section_our_solution" style="align-items: flex-start !important;">
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="our_solution_category" style="width: 20%;">
+      <div class="our_solution_category" style="width: 40%;">
         <div class="solution_cards_box">
           <div class="solution_card">
             <div class="hover_color_bubble"></div>
@@ -83,3 +90,9 @@
 
 
 <% end %>
+
+
+<br>
+<br>
+<br>
+</body>
