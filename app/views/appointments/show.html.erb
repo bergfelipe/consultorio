@@ -15,5 +15,10 @@
   <%= @appointment.appointment_date %>
 </p>
 
+<p>
+  <strong>descricao:</strong>
+  <%= @appointment.patient.descricao %>
+</p>
+
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>

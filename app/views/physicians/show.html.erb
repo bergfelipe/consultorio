@@ -84,8 +84,7 @@
                 Data e Hora: <%= appointment.appointment_date.strftime(" %m, %b,  %Y - %H:%M") %>
               </p>
               <%= link_to 'Editar Consulta', edit_appointment_path(appointment),  class:"btn btn-primary" %>
-              
-              <a class="btn btn-primary" href="Pacientes">Ver Paciente</a>
+              <%= link_to 'Show', appointment, class:"btn btn-primary" %>
             </div>
           </div>
           
