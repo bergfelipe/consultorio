@@ -1,20 +1,42 @@
-
 <br>
+<div class="row">
+  <div class="col-xs-6">
+    <h3 class="panel-title text-center">Pacientes</h3>
+      
+    
+  </div>
+</div>
+
+<hr style="background-color: black
+;">
+
+
+<div class="row text-center" style=" --bs-gutter-x: -15rem;">
+<% @patients.each do |patient| %> 
+<div class="col-sm-3 text-center">
 <div class="container">
-  <div class="row row-cols-sm-2 row-cols-md-3 ">
-   <% @patients.each do |patient| %> 
-    <div class="col-sm-6">
-      <br>
-    <div class="card  w-75">
-      <div class="card-body">
-        <h5 class="card-title">Paciente:<%= patient.name %></h5>
-        <h5 class="card-title">Paciente:<%= patient.descricao_paciente %></h5>
-        <%= link_to 'Editar Paciente',edit_patient_path(patient),  class:"btn btn-primary" %>
+<div class="a-box">
+  <div class="img-container">
+    <div class="img-inner">
+      <div class="inner-skew">
+        <img src="https://cdn-icons-png.flaticon.com/512/754/754554.png">
       </div>
     </div>
   </div>
-  <% end %>
+  <div class="text-container">
+    <h3>Paciente: <%= patient.name %></h3>
+    <div>
+      This a demo experiment to skew image container. It looks good.
+    </div>
+  </div>
+</div>
 </div>
 </div>
 
-<%= link_to 'New Patient', new_patient_path %>
+<% end %>
+
+</div>
+
+
+<br>
+
