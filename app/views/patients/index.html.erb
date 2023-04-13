@@ -23,11 +23,14 @@
       </div>
     </div>
   </div>
-  <div class="text-container">
+  <div class="text-container"> 
     <h3>Paciente: <%= patient.name %></h3>
     <div>
-      This a demo experiment to skew image container. It looks good.
+      <h3>Descriçao: <%= patient.descricao %></h3>
     </div>
+    <br>
+    <td><%= link_to 'Detalhes', patient,  class: 'btn btn-outline-info' %></td>
+      <td><%= link_to 'Editar', edit_patient_path(patient), class: 'btn btn-outline-success' %></td>
   </div>
 </div>
 </div>
@@ -38,5 +41,7 @@
 </div>
 
 
+<br>
+<br>
 <br>
 
