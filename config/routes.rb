@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "Medicos", to: 'physicians#index'
   get "Consultas", to: 'appointments#index'
   get "Home", to: 'home#index'
+  get "Relatorio", to: 'patients#show'
   
 
   root to:'home#index'
